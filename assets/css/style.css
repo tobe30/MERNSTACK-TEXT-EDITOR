@@ -149,23 +149,25 @@ h6 {
   font-family: sans-serif;
   margin: 0;
 }
-.butt-on{
-  padding: 6px 10px;
+.butt-on {
+  padding: 6px 7px;
   border: none;
   border-radius: 5px;
   background: #9b87f5;
   color: #fff;
-  margin-right: 10px;
 }
 
-.butt-os{
-  padding: 6px 10px;
+.butt-os {
+  padding: 5px 7px;
   border: 1px solid #9b87f5;
   border-radius: 5px;
   background: none;
   color: #fff;
   margin-right: 10px;
 }
+
+
+
 
 #projectName {
   background-color: #1e1e1e;
