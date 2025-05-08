@@ -1,154 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Dashboard - tobe</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <!-- <link href="assets/img/Group 1.png" rel="icon"> -->
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-  
-
-
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4DEV Dashboard Clone</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top d-flex align-items-center">
-    <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
-        <div class="gradient-text">4DEV</div>
-      </a>
+  <!-- Toggle button (visible on mobile) -->
+  <nav class="navbar navbar-dark bg-dark d-md-none">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMobile">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <span class="navbar-brand mb-0 h1 gradient-text">4DEV</span>
     </div>
-    <!-- End Logo -->
-    <i class="bi bi-list toggle-sidebar-btn"></i>
+  </nav>
 
-    <nav class="header-nav ms-auto">
-  
-        <button class="butt-on" data-bs-toggle="modal" data-bs-target="#newProjectModal">+ New Project</button>
+  <!-- Sidebar for desktop -->
+ <!-- Sidebar -->
+<div class="d-none d-md-block sidebar p-3 position-fixed">
+  <a href="#" class="logo d-block text-center mb-4">
+    <div class="gradient-text fw-bold">4DEV</div>
+  </a>
 
-      <button class="butt-os">Sign Up</button>
-      <button class="butt-os">Login</button>
-    </nav>
-    <!-- End Icons Navigation -->
-  </header>
-
-  <!-- ======= Sidebar ======= -->
-  <aside id="sidebar" class="sidebar">
-    <ul class="sidebar-nav" id="sidebar-nav">
-        <li class="nav-item">
-            <a class="nav-link" href="index.html">
-                <i class="bi bi-file-earmark"></i>
-              <span>Project-1</span>
-            </a>
-          </li>
-      <!-- End Dashboard Nav -->
-
-
-
-      <li class="nav-items">
-        <a class="nav-links collapsed" href="">
-          <i class="bi bi-box-arrow-right"></i>
-          <span>Logout</span>
-        </a>
-      </li>
-      <!-- End Profile Page Nav -->
-    </ul>
-  </aside>
-
- <main id="main" class="main-editor">
-
-  <ul class="nav nav-tabs editor-tabs">
-    <li class="nav-item">
-      <a class="nav-link active" data-bs-toggle="tab" href="#html">HTML</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-bs-toggle="tab" href="#css">CSS</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-bs-toggle="tab" href="#js">JS</a>
-    </li>
-  </ul>
-
-  <div class="tab-content flex-grow-1">
-    <div id="html" class="tab-pane fade show active code-editor">
-      <textarea id="htmlCode" class="editor-area"><div id="devBox">4DEV</div></textarea>
-    </div>
-    <div id="css" class="tab-pane fade code-editor">
-      <textarea id="cssCode" class="editor-area">#devBox { color: white; font-size: 24px; }</textarea>
-    </div>
-    <div id="js" class="tab-pane fade code-editor">
-      <textarea id="jsCode" class="editor-area">console.log("4DEV ready");</textarea>
+  <div class="user-info mb-4 d-flex align-items-center">
+    <div class="level-circle">L8</div>
+    <div class="ms-2">
+      <div class="text-white fw-semibold">Alex Cooper</div>
+      <div class="user-role">Web3 Architect</div>
     </div>
   </div>
 
-  <div class="live-preview">
-    <iframe id="previewFrame" style="width: 100%; height: 100%; border: none;"></iframe>
+  <div class="mb-3">
+    <div class="d-flex justify-content-between small  mb-1">
+      <span>Level 8</span><span>12,540 XP</span>
+    </div>
+    <div class="progress xp-ba">
+      <div class="progress-bar"></div>
+    </div>
   </div>
 
-</main>
+  <nav class="nav flex-column gap-2">
+    <a href="#" class="nav-link active"><i class="bi bi-grid"></i> Dashboard</a>
+    <a href="#" class="nav-link d-flex justify-content-between align-items-center">
+      <span><i class="bi bi-code"></i> Projects</span>
+      <span class="badge bg-purple text-dark rounded-pill">3</span>
+    </a>
+    <a href="#" class="nav-link"><i class="bi bi-chat-dots"></i> Collaboration</a>
+    <a href="#" class="nav-link"><i class="bi bi-journal-code"></i> Learning</a>
+    <a href="#" class="nav-link"><i class="bi bi-graph-up"></i> Analytics</a>
+    <a href="#" class="nav-link"><i class="bi bi-people"></i> Community</a>
+    <a href="#" class="nav-link mt-auto"><i class="bi bi-gear"></i> Settings</a>
+  </nav>
+</div>
 
-<!-- New Project Modal -->
-<div class="modal fade mb-5" id="newProjectModal" tabindex="-1" aria-labelledby="newProjectLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content" style="background-color: #1e1e1e; color: white;">
-        <div class="modal-header">
-          <h5 class="modal-title" id="newProjectLabel">Create New Project</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="filter: invert(1);"></button>
-        </div>
-        <div class="modal-body">
-          <label for="projectName" class="form-label">Project Name</label>
-          <input type="text" id="projectName" class="form-control mb-3" placeholder="Enter name..." />
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-primary">Save Project</button>
+
+  <!-- Sidebar offcanvas for mobile -->
+  <div class="offcanvas offcanvas-start d-md-none" tabindex="-1" id="sidebarMobile">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title gradient-text">4DEV</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="d-flex align-items-center mb-3">
+        <div class="bg-purple rounded-circle text-white d-flex align-items-center justify-content-center" style="width: 40px; height: 40px; background-color: #9b87f5;">L8</div>
+        <div class="ms-2">
+          <div class="text-white fw-semibold">Alex Cooper</div>
+          <small class="text1">Web3 Architect</small>
         </div>
       </div>
+      <div class="mb-3">
+        <div class="d-flex justify-content-between small  mb-1">
+          <span>Level 8</span><span>12,540 XP</span>
+        </div>
+        <div class="progress xp-ba">
+          <div class="progress-bar"></div>
+        </div>
+      </div>
+      <nav class="nav flex-column gap-2">
+        <a href="#" class="nav-link active"><i class="bi bi-grid"></i> Dashboard</a>
+        <a href="#" class="nav-link d-flex justify-content-between align-items-center">
+          <span><i class="bi bi-code"></i> Projects</span>
+          <span class="badge bg-purple text-dark rounded-pill">3</span>
+        </a>
+        <a href="#" class="nav-link"><i class="bi bi-chat-dots"></i> Collaboration</a>
+        <a href="#" class="nav-link"><i class="bi bi-journal-code"></i> Learning</a>
+        <a href="#" class="nav-link"><i class="bi bi-graph-up"></i> Analytics</a>
+        <a href="#" class="nav-link"><i class="bi bi-people"></i> Community</a>
+        <a href="#" class="nav-link mt-auto"><i class="bi bi-gear"></i> Settings</a>
+      </nav>
     </div>
   </div>
+
   
 
+  <!-- Main Content -->
+  <main class="main">
+    <div class="d-flex justify-content-between align-items-center flex-wrap mb-3">
+      <div>
+        <h3 class="mb-1">Welcome back, Alex!</h3>
+        <p class="mb-0 text1">Resume your tech adventure where you left off</p>
+      </div>
+      <div class="d-flex align-items-center mt-3 mt-md-0">
+        <div class="me-3 position-relative">
+          <i class="bi bi-search position-absolute text1" style="top: 50%; left: 12px; transform: translateY(-50%);"></i>
+          <input 
+            type="text" 
+            class="form-control search-input ps-5 text1" 
+            placeholder="Search projects, quests..."
+          >
+        </div>
+        <div class="position-relative">
+          <i class="bi bi-bell text-white fs-5"></i>
+          <span class="badge rounded-pill bg-purple text-white position-absolute top-0 start-100 translate-middle" style="font-size: 0.7rem; padding: 0.2em 0.4em;">
+            3
+          </span>
+        </div>
+      </div>
+      
+    </div>
 
-  <!-- ======= Footer ======= -->
- 
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card p-4 xp-card">
+              <h5 class="mb-3 fw-bold">Your XP Journey</h5>
+              <div class="d-flex justify-content-between small mb-1">
+                <span class="fw-semibold">Level 8</span>
+                <span class="fw-semibold">12,540 / 15,000 XP</span>
+              </div>
+              <div class="progress mb-3" style="height: 10px; background-color: #2d2f3f;">
+                <div class="progress-bar xp-bar" style="width: 83%;"></div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div>
+                  <div class="text1 small">Current Title</div>
+                  <div class="fw-bold">Web3 Architect</div>
+                </div>
+                <div class="text1">
+                  <div class="text-muted small">Next Title</div>
+                  <div class="fw-bold text-gradient">Agent Trainer</div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-2 mt-3">
+                <span class="xpt text-white">+120 XP today</span>
+                <small class="text1">Top 15% this week</small>
+              </div>
+            </div>
+          </div>
+          
+          
+  
+          <div class="col-md-4">
+            <div class="recent-projects-card p-4">
+              <h5 class="mb-4">Recent Projects</h5>
+              <div class="d-flex align-items-start mb-4">
+                <div class="icon-box purple">
+                  <i class="bi bi-code"></i>
+                </div>
+                <div class="ms-3">
+                  <strong class="d-block">NFT Marketplace</strong>
+                  <small class="text1">Updated 2 hours ago</small>
+                </div>
+              </div>
+              <div class="d-flex align-items-start mb-4">
+                <div class="icon-box blue">
+                  <i class="bi bi-clock"></i>
+                </div>
+                <div class="ms-3">
+                  <strong class="d-block">AI Customer Service Agent</strong>
+                  <small class="text1">Updated yesterday</small>
+                </div>
+              </div>
+              <div class="d-flex align-items-start mb-4">
+                <div class="icon-box green">
+                  <i class="bi bi-chat-dots"></i>
+                </div>
+                <div class="ms-3">
+                  <strong class="d-block">DeFi Dashboard</strong>
+                  <small class="text1">Updated 3 days ago</small>
+                </div>
+              </div>
+              <button class="but-c">View All Projects</button>
+            </div>
+          </div>
+          
+  
+          <div class="col-md-4">
+            <div class="card p-4 active-quests-card">
+              <h5 class="mb-4">
+                Active Quests 
+                <span class="activate float-end">3 Active</span>
+              </h5>
+          
+              <!-- Quest 1 -->
+              <div class="quest-box mb-3 p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <strong class="text-white mb-1">Deploy Smart Contract</strong>
+                  <span class="badge bg-purple text-white">300 XP</span>
+                </div>
+                <small class="text1 d-block">Create and deploy an ERC-721 contract on testnet</small>
+                <div class="progress mt-2">
+                  <div class="progress-bar" style="width: 60%; background: linear-gradient(to right, #e97fff, #4287f5);"></div>
+                </div>
+                <small class="text2 mt-1 d-block text-end">60% Complete</small>
+              </div>
+          
+              <!-- Quest 2 -->
+              <div class="quest-box p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <strong class="text-white mb-1">Train AI Agent</strong>
+                  <span class="badge bg-purple text-white">500 XP</span>
+                </div>
+                <small class="text1 d-block">Create an AI agent that can answer customer queries</small>
+                <div class="progress mt-2" style="height: 6px;">
+                  <div class="progress-bar" style="width: 25%; background: linear-gradient(to right, #5eead4, #64748b);"></div>
+                </div>
+                <small class="text2 mt-1 d-block text-end">25% Complete</small>
+              </div>
+          
+              <button class="but-c mt-3">View All Quests</button>
+            </div>
+          </div>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-<!-- calendar -->
+          <div class="col-md-4">
+            <div class="card p-4 leaderboard-card">
+              <h5 class="mb-4 text-white">Community Leaderboard</h5>
+          
+              <!-- Leader 1 -->
+              <div class="leader-entry">
+                <span class="badge bbb  bg-yellow">1</span>
+                <div class="leader-text">
+                  <strong>Sarah Chen</strong>
+                  <small>Agent Trainer • 24,560 XP</small>
+                </div>
+              </div>
+          
+              <!-- Leader 2 -->
+              <div class="leader-entry">
+                <span class="badge bbb bg-secondary">2</span>
+                <div class="leader-text">
+                  <strong>Ryan Davis</strong>
+                  <small>Web3 Architect • 22,140 XP</small>
+                </div>
+              </div>
+          
+              <!-- Leader 3 -->
+              <div class="leader-entry">
+                <span class="badge bbb bg-orange">3</span>
+                <div class="leader-text">
+                  <strong>Miguel Lopez</strong>
+                  <small>Web3 Architect • 19,870 XP</small>
+                </div>
+              </div>
+          
+              <!-- User -->
+              <div class="leader-entry highlight">
+                <span class="badge bbb rank-badge" style="background: #493c61;!important">8</span>
+                <div class="leader-text">
+                  <strong>Alex Cooper (You)</strong>
+                  <small>Web3 Architect • 12,540 XP</small>
+                </div>
+              </div>
+          
+              <button class="but-c mt-3">Full Leaderboard</button>
+            </div>
+          </div>
+          
+          
+          
+      </div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/quill/quill.min.js"></script>
-  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
-  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+      <h5 class="text-white mb-4 mt-4 fw-semibold">Current Project Visualization</h5>
+      <div class="project-card-container p-4">
+      
+        <div class="row g-4">
+          <!-- Left Section -->
+          <div class="col-md-7">
+            <div class="left-card ">
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <h6 class="text-white fw-semibold mb-0">NFT Marketplace Visualization</h6>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-sm btn-dark px-3 fw-medium border-0 text-white">Live View</button>
+                  <button class="btn btn-sm btn-purple px-3 fw-medium">Edit Project</button>
+                </div>
+              </div>
+            
+              <div class="visual-box d-flex flex-column justify-content-center align-items-center rounded-3">
+                <i class="bi bi-graph-up text3 fs-1 mb-2"></i>
+                <p class="mb-0 text4 fw-medium">Interactive project visualization</p>
+                <small class="text3">Click Edit Project to view in detail</small>
+              </div>
+            </div>
+            
+          </div>
+      
+          <!-- Right Section -->
+          <div class="col-md-5">
+            <h6 class="text-white fw-semibold mb-3">Project Metrics</h6>
+      
+            <div class="row g-3 mb-3">
+              <div class="col-6">
+                <div class="metric-box p-3 rounded-2">
+                  <small class="text4 fw-medium">Smart Contracts</small>
+                  <h5 class="mb-0 text-white fw-semibold">3</h5>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="metric-box p-3 rounded-2">
+                  <small class="text4 fw-medium">Transactions</small>
+                  <h5 class="mb-0 text-white fw-semibold">142</h5>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="metric-box p-3 rounded-2">
+                  <small class="text4 fw-medium">Gas Used</small>
+                  <h5 class="mb-0 text-white fw-semibold">0.42 ETH</h5>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="metric-box p-3 rounded-2">
+                  <small class="text4 fw-medium">NFTs Minted</small>
+                  <h5 class="mb-0 text-white fw-semibold">28</h5>
+                </div>
+              </div>
+            </div>
+      
+            <div class="table-container rounded-3 overflow-hidden">
+              <table class="custom-table w-100 mb-0">
+                <thead>
+                  <tr>
+                    <th>Contract</th>
+                    <th>Status</th>
+                    <th>Deployment</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>NFT.sol</td>
+                    <td class="text-success">Active</td>
+                    <td>Ethereum Testnet</td>
+                  </tr>
+                  <tr>
+                    <td>Marketplace.sol</td>
+                    <td class="text-success">Active</td>
+                    <td>Ethereum Testnet</td>
+                  </tr>
+                  <tr>
+                    <td>Auction.sol</td>
+                    <td class="text-warning">Draft</td>
+                    <td>Not Deployed</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            
+          </div>
+        </div>
+      </div>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+    <!-- Monaco container -->
+    <h5 class="text-white mb-4 mt-4 fw-semibold">Code Editor</h5>
 
+<div class="code-editor-container mt-3 mb-3">
+  <div class="editor-header d-flex justify-content-between align-items-center p-3">
+    <h6 class="mb-0 text-white"> <i class="bi bi-code help"></i> Code Editor <span class="badge bg-purple ms-2">JAVASCRIPT</span></h6>
+    <div>
+      <button class="copy btn-sm me-2" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
+      <button class="btn btn-purple btn-sm" onclick="runCode()"><i class="bi bi-play-fill"></i> Run</button>
+    </div>
+  </div>
+
+  <div id="editor" style="height: 400px;"></div>
+
+  <!-- Output console -->
+  <div class="output-console text-white small px-3 py-2">
+    <strong>Output:</strong>
+    <pre id="outputArea" class="mt-2 mb-0"></pre>
+  </div>
+
+  <div class="editor-footer text1 px-3 py-2 small border-top">
+    Earn +50 XP by completing this coding challenge! Write a function that calculates the Fibonacci sequence.
+  </div>
+</div>
+
+<!-- Monaco loader -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.34.1/min/vs/loader.min.js"></script>
+
+
+      
+      
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.34.1/min/vs/loader.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    let editorInstance;
+  
+    require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.34.1/min/vs' } });
+  
+    require(['vs/editor/editor.main'], function () {
+      editorInstance = monaco.editor.create(document.getElementById('editor'), {
+        value: `// Welcome to 4DEV Monaco Editor\n\nfunction helloWorld() {\n  console.log("Hello, 4DEV adventurer!");\n  return "Welcome to the coding quest!";\n}\n\nhelloWorld();`,
+        language: 'javascript',
+        theme: 'vs-dark',
+        fontSize: 14,
+        automaticLayout: true
+      });
+    });
+  
+    function copyCode() {
+      const code = editorInstance.getValue();
+      navigator.clipboard.writeText(code).then(() => alert("Code copied to clipboard!"));
+    }
+  
+    function runCode() {
+      const outputArea = document.getElementById("outputArea");
+      outputArea.textContent = ""; // clear previous output
+  
+      const originalLog = console.log;
+      console.log = function (...args) {
+        outputArea.textContent += args.join(" ") + "\n";
+        originalLog.apply(console, args);
+      };
+  
+      try {
+        new Function(editorInstance.getValue())();
+      } catch (e) {
+        outputArea.textContent += "Error: " + e.message;
+      }
+  
+      console.log = originalLog;
+    }
+  </script>
+  
+  
 </body>
-
 </html>
