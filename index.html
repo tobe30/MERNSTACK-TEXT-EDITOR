@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>4DEV Dashboard Clone</title>
+   <!-- Favicons -->
+  <link href="assets/img/logo.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -11,12 +15,12 @@
 <body>
 
   <!-- Toggle button (visible on mobile) -->
-  <nav class="navbar navbar-dark bg-dark d-md-none">
+  <nav class="navbar navbar-dark  d-md-none">
     <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1 gradient-text">4DEV</span>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMobile">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <span class="navbar-brand mb-0 h1 gradient-text">4DEV</span>
     </div>
   </nav>
 
@@ -37,7 +41,7 @@
 
   <div class="mb-3">
     <div class="d-flex justify-content-between small  mb-1">
-      <span>Level 8</span><span>12,540 XP</span>
+      <span >Level 8</span><span>12,540 XP</span>
     </div>
     <div class="progress xp-ba">
       <div class="progress-bar"></div>
@@ -75,7 +79,7 @@
       </div>
       <div class="mb-3">
         <div class="d-flex justify-content-between small  mb-1">
-          <span>Level 8</span><span>12,540 XP</span>
+          <span class="text1">Level 8</span><span class="text1">12,540 XP</span>
         </div>
         <div class="progress xp-ba">
           <div class="progress-bar"></div>
@@ -103,7 +107,7 @@
     <div class="d-flex justify-content-between align-items-center flex-wrap mb-3">
       <div>
         <h3 class="mb-1">Welcome back, Alex!</h3>
-        <p class="mb-0 text1">Resume your tech adventure where you left off</p>
+        <p class="mb-3 text1">Resume your tech adventure where you left off</p>
       </div>
       <div class="d-flex align-items-center mt-3 mt-md-0">
         <div class="me-3 position-relative">
@@ -123,9 +127,12 @@
       </div>
       
     </div>
-
+<div class="container-fluid">
     <div class="row g-4">
-        <div class="col-md-4">
+<div class="col-12 col-sm-6 col-md-6 col-xl-4">
+
+
+
             <div class="card p-4 xp-card">
               <h5 class="mb-3 fw-bold">Your XP Journey</h5>
               <div class="d-flex justify-content-between small mb-1">
@@ -154,10 +161,13 @@
           
           
   
-          <div class="col-md-4">
+  <div class="col-12 col-sm-6 col-md-6 col-xl-4">
+
+
+
             <div class="recent-projects-card p-4">
               <h5 class="mb-4">Recent Projects</h5>
-              <div class="d-flex align-items-start mb-4">
+              <div class="d-flex mnm align-items-start mb-4  project-item">
                 <div class="icon-box purple">
                   <i class="bi bi-code"></i>
                 </div>
@@ -166,7 +176,7 @@
                   <small class="text1">Updated 2 hours ago</small>
                 </div>
               </div>
-              <div class="d-flex align-items-start mb-4">
+              <div class="d-flex align-items-start mb-4  project-item">
                 <div class="icon-box blue">
                   <i class="bi bi-clock"></i>
                 </div>
@@ -175,7 +185,7 @@
                   <small class="text1">Updated yesterday</small>
                 </div>
               </div>
-              <div class="d-flex align-items-start mb-4">
+              <div class="d-flex align-items-start mb-4  project-item">
                 <div class="icon-box green">
                   <i class="bi bi-chat-dots"></i>
                 </div>
@@ -189,7 +199,10 @@
           </div>
           
   
-          <div class="col-md-4">
+  <div class="col-12 col-sm-6 col-md-6 col-xl-4">
+
+
+
             <div class="card p-4 active-quests-card">
               <h5 class="mb-4">
                 Active Quests 
@@ -226,8 +239,11 @@
             </div>
           </div>
 
-          <div class="col-md-4">
-            <div class="card p-4 leaderboard-card">
+  <div class="col-12 col-sm-6 col-md-6 col-xl-4">
+
+
+
+            <div class="card p-4 leaderboard-card h-100">
               <h5 class="mb-4 text-white">Community Leaderboard</h5>
           
               <!-- Leader 1 -->
@@ -266,20 +282,20 @@
                 </div>
               </div>
           
-              <button class="but-c mt-3">Full Leaderboard</button>
+              <button class="but-c mt-3 mb-1">Full Leaderboard</button>
             </div>
           </div>
           
           
           
       </div>
-
+</div>
       <h5 class="text-white mb-4 mt-4 fw-semibold">Current Project Visualization</h5>
       <div class="project-card-container p-4">
       
         <div class="row g-4">
           <!-- Left Section -->
-          <div class="col-md-7">
+         <div class="col-12 col-lg-7">
             <div class="left-card ">
               <div class="d-flex justify-content-between align-items-start mb-3">
                 <h6 class="text-white fw-semibold mb-0">NFT Marketplace Visualization</h6>
@@ -299,7 +315,8 @@
           </div>
       
           <!-- Right Section -->
-          <div class="col-md-5">
+        <div class="col-12 col-lg-5">
+
             <h6 class="text-white fw-semibold mb-3">Project Metrics</h6>
       
             <div class="row g-3 mb-3">
@@ -330,6 +347,7 @@
             </div>
       
             <div class="table-container rounded-3 overflow-hidden">
+              <div class="table-responsive">
               <table class="custom-table w-100 mb-0">
                 <thead>
                   <tr>
@@ -356,6 +374,7 @@
                   </tr>
                 </tbody>
               </table>
+              </div>
             </div>
             
             
@@ -367,13 +386,40 @@
     <h5 class="text-white mb-4 mt-4 fw-semibold">Code Editor</h5>
 
 <div class="code-editor-container mt-3 mb-3">
-  <div class="editor-header d-flex justify-content-between align-items-center p-3">
-    <h6 class="mb-0 text-white"> <i class="bi bi-code help"></i> Code Editor <span class="badge bg-purple ms-2">JAVASCRIPT</span></h6>
-    <div>
-      <button class="copy btn-sm me-2" onclick="copyCode()"><i class="bi bi-clipboard"></i> Copy</button>
-      <button class="btn btn-purple btn-sm" onclick="runCode()"><i class="bi bi-play-fill"></i> Run</button>
-    </div>
+ <div class="editor-header d-flex justify-content-between align-items-center p-3">
+  <h6 class="mb-0 text-white">
+    <i class="bi bi-code help"></i> Code Editor
+    <span class="badge bg-purple ms-2">JAVASCRIPT</span>
+  </h6>
+
+  <div class="d-flex align-items-center flex-wrap gap-2">
+ <div class="col-auto">
+  <div class="input-group input-group-sm project-title-input" style="max-width: 160px;">
+    <span class="input-group-text bg-dark border-0 text-white">
+      <i class="bi bi-terminal"></i>
+    </span>
+    <input
+      type="text"
+      class="form-control bg-dark text-white border-0"
+      placeholder="Project Title"
+    />
   </div>
+</div>
+
+    
+    <button class="btn btn-success btn-sm">
+      <i class="bi bi-save"></i> Save Project
+    </button>
+
+    <button class="copy btn-sm btn-outline-light">
+      <i class="bi bi-clipboard"></i> Copy
+    </button>
+    <button class="btn btn-purple btn-sm">
+      <i class="bi bi-play-fill"></i> Run
+    </button>
+  </div>
+</div>
+
 
   <div id="editor" style="height: 400px;"></div>
 
@@ -389,15 +435,14 @@
 </div>
 
 <!-- Monaco loader -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.34.1/min/vs/loader.min.js"></script>
 
 
       
       
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.34.1/min/vs/loader.min.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     let editorInstance;
   
@@ -441,3 +486,23 @@
   
 </body>
 </html>
+
+
+
+<!-- const updatePreview = () => {
+  const preview = iframeRef.current.contentDocument;
+  const fullCode = `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <style>${css}</style>
+    </head>
+    <body>
+      ${html}
+      <script type="text/javascript">${js}</script>
+    </body>
+    </html>`;
+  preview.open();
+  preview.write(fullCode);
+  preview.close();
+}; -->
